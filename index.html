@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Porteño Pub — Buenos Aires</title>
+  <meta name="description" content="O pub argentino mais autêntico de Maceió. Drinks premium e a melhor experiência noturna da cidade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-emblem">El Porteño</div>
+    <div class="loader-sub">Pub — Maceió</div>
+    <div class="loader-line"></div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+    <a href="#hoje" onclick="closeMobileMenu()">Hoje</a>
+    <a href="#cardapio" onclick="closeMobileMenu()">Cardápio</a>
+    <a href="#reservas" onclick="closeMobileMenu()">Reservas</a>
+    <a href="#galeria" onclick="closeMobileMenu()">Galeria</a>
+    <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo"><img class="logo-img" src="assets/logo.svg" alt="El Porteño Pub"></a>
+    <ul class="nav-links">
+      <li><a href="#hoje">Hoje</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#reservas">Reservas</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/558299250449?text=Olá!+Quero+reservar+uma+mesa+no+El+Porteño+Pub." target="_blank" class="nav-cta">Reservar Mesa</a>
+    <div class="hamburger" onclick="openMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-texture"></div>
+    <div class="hero-flames" id="flames"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Buenos Aires Souls</div>
+      <img src="assets/logo.png" alt="El Porteño Pub" class="hero-logo">
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Parrilla argentina · Drinks premium · Vida noturna · Aberto quarta a domingo às 18h</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/558299250449text=Olá!+Quero+reservar+uma+mesa+no+El+Porteño+Pub." target="_blank" class="btn-primary">Reservar Mesa</a>
+        <a href="#cardapio" class="btn-outline">Ver Cardápio</a>
+        <a href="https://wa.me/558299250449 target="_blank" class="btn-whatsapp">WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('hoje').scrollIntoView({behavior:'smooth'})">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- HOJE NO EL PORTEÑO -->
+  <section id="hoje">
+    <div style="max-width:1200px;margin:0 auto;" class="reveal">
+      <div class="section-label">Dashboard do Dia</div>
+      <h2 class="section-title">Hoje no <em>El Porteño</em></h2>
+      <div class="hoje-grid">
+
+        <div class="hoje-card">
+          <div class="status-badge badge-open">
+            <div class="pulse-dot dot-green"></div>
+            Aberto Agora
+          </div>
+          <div class="card-title">Status do Bar</div>
+          <div class="card-desc">Mesas disponíveis! Venha agora e garanta seu lugar.</div>
+          <table class="horarios-table" style="margin-top:1rem">
+            
+            <tr><td>Quarta-feira a Domingo</td><td>18h – 00:00h</td></tr>
+          </table>
+        </div>
+
+        
+
+        <div class="hoje-card">
+          <div class="card-icon">Drink</div>
+          <div class="card-tag">Drink da Semana</div>
+          <div class="card-title">Portero Sour</div>
+          <div class="card-desc">Whisky defumado, limão tahiti, mel de laranja e clara de ovo. O favorito da casa.</div>
+          <div class="card-price">R$38</div>
+        </div>
+
+        <div class="hoje-card">
+          <div class="card-icon">Drink</div>
+          <div class="card-tag">Drink Especial</div>
+          <div class="card-title">Malbec Reserva</div>
+          <div class="card-desc">Vinho tinto argentino premium, com notas de frutas vermelhas e taninos suaves. Perfeito para acompanhar nossa parrilla.</div>
+          <div class="card-price">R$45</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio">
+    <div class="cardapio-header reveal">
+      <div class="section-label">Nosso Cardápio</div>
+      <h2 class="section-title">Sabores que <em>vão além</em></h2>
+      <div class="menu-filters">
+        <button type="button" class="filter-btn active" data-filter="all">
+          <span class="filter-thumb"><img src="images/galeria1.jpg" alt="Tudo"></span>
+          <span class="filter-label">Tudo</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="drinks">
+          <span class="filter-thumb"><img src="images/bolinho_queijo.jpg" alt="Drinks"></span>
+          <span class="filter-label">Drinks</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="cervejas">
+          <span class="filter-thumb"><img src="images/galeria2.jpg" alt="Cervejas"></span>
+          <span class="filter-label">Cervejas</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="parrilla">
+          <span class="filter-thumb"><img src="images/galeria4.jpg" alt="Parrilla"></span>
+          <span class="filter-label">Parrilla</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="petiscos">
+          <span class="filter-thumb"><img src="images/batatafrita.jpg" alt="Petiscos"></span>
+          <span class="filter-label">Petiscos</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="burgers">
+          <span class="filter-thumb"><img src="images/kibe.jpg" alt="Hambúrgueres"></span>
+          <span class="filter-label">Hambúrgueres</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="combos">
+          <span class="filter-thumb"><img src="images/petisco_1.jpg" alt="Combos"></span>
+          <span class="filter-label">Combos</span>
+        </button>
+      </div>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Batata Frita</div>
+          <div class="item-desc">Batatas fritas.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>17</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Batata Porteña</div>
+          <div class="item-desc">Batatas fritas, cobertas de bacon e cebola refogada.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>20</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Batata Provençal</div>
+          <div class="item-desc">Batatas fritas, cobertas de alho e salsa refogados.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>20</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Bolinho de Bacalhau</div>
+          <div class="item-desc">Bolinhos empanados, recheados com bacalhau, acompanhado com molho de alho - 6 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>30</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Bolinho de Macaxeira</div>
+          <div class="item-desc">Bolinhos empanados, recheados com charque, acompanhado com molho rosé - 8 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>25</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Bolinho de Queijo Gouda</div>
+          <div class="item-desc">Bolinhos empanados, recheados com queijo gouda, acompanhado com molho de alho - 12 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>28</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Medalhão de Frango</div>
+          <div class="item-desc">Medalhão de frango enrolado no bacon, temperado com mostarda - 10 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>30</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Bolinho de Peperoni</div>
+          <div class="item-desc">Bolinhos empanados, recheados com peperoni e muçarela, acompanhado com molho rosé - 8 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>28</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Caldinho de Feijão</div>
+          <div class="item-desc">Feijão (acompanha coentro, torradinha, torresmo).</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Caldinho de Vaca Atolada</div>
+          <div class="item-desc">Vaca atolada (acompanha torradinha).</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>12</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Caldinho de Camarão</div>
+          <div class="item-desc">Camarão (acompanha torradinha).</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>48</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Camarão Acebolado</div>
+          <div class="item-desc">Camarões acebolados, refogados no alho - acompanhados com molho rosé.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>35</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Kibe de Queijo</div>
+          <div class="item-desc">Kibes de queijo.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>35</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Kibe de Carne</div>
+          <div class="item-desc">Kibes de carne - 6 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>35</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Dados de Tapioca</div>
+          <div class="item-desc">Acompanhada de geléia de pimenta - 10 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>22</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Coração Acebolado</div>
+          <div class="item-desc">Coração de frango acebolado.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>22</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Porção de Coxinhas</div>
+          <div class="item-desc">Mini coxinhas de frango com catupiry, acompanhadas com molho rosé - 6 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>30</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Porção de Pastéis de Carne</div>
+          <div class="item-desc">Pastéis de carne - 6 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>32</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="petiscos">
+        <div class="menu-item-body">
+          <div class="item-name">Porção de Pastéis de Frango</div>
+          <div class="item-desc">Pastéis de frango - 6 unidades.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>32</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARRILLA -->
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Filé com Fritas</div>
+          <div class="item-desc">Tiras de filé mignon, creme de leite, curry e orégano.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>46</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Isca de Frango com Batata</div>
+          <div class="item-desc">Iscas empanadas, mostarda e limão.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>20</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Empanada Caprese</div>
+          <div class="item-desc">Muçarela, manjericão e tomate.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>13</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Empanada de Carne</div>
+          <div class="item-desc">Carne, cebola refogada e temperos.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>13</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Empanada de Camarão</div>
+          <div class="item-desc">Camarão, cebola refogada, tomate e queijo.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>14</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Empanada de Frango</div>
+          <div class="item-desc">Frango, cebola refogada e tomate.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>13</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Empanada Vegana</div>
+          <div class="item-desc">Proteína de soja.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>13</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Milanesa Caprese</div>
+          <div class="item-desc">Carne de boi empanada, queijo gratinado, tomate concassé e folhas de manjericão. Acompanha batata.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>45</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Milanesa Fugazzeta</div>
+          <div class="item-desc">Carne ou frango, queijo gratinado, presunto e cebola refogada. Acompanha batata.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>45</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="parrilla">
+        <div class="menu-item-body">
+          <div class="item-name">Milanesa Napolitana</div>
+          <div class="item-desc">Carne de boi, queijo gratinado e molho de tomate caseiro. Acompanha batata.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>45</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BURGERS -->
+      <div class="menu-item reveal" data-cat="burgers">
+        <div class="menu-item-body">
+          <div class="item-name">Hambúrguer Artesanal</div>
+          <div class="item-desc">Hambúrguer artesanal, alface, tomate, bacon, ovo, queijo e presunto.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>37</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="burgers">
+        <div class="menu-item-body">
+          <div class="item-name">Hambúrguer de Frango</div>
+          <div class="item-desc">Frango, bacon, presunto, queijo gratinado, ovo, alface e tomate.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>37</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-item reveal" data-cat="drinks">
+        <div class="menu-item-body">
+          <div class="item-name">Gin Tonic</div>
+          <div class="item-desc">Gin, tônica, limão siciliano.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>25</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERVEJAS -->
+      <div class="menu-item reveal" data-cat="cervejas">
+        <div class="menu-item-body">
+          <div class="item-name">Brahma</div>
+          <div class="item-desc">Cerveja Brahma.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>11</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEMALCOOL -->
+      <div class="menu-item reveal" data-cat="semalcool">
+        <div class="menu-item-body">
+          <div class="item-name">Refrigerante</div>
+          <div class="item-desc">Refrigerante.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>6</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOTS -->
+      <div class="menu-item reveal" data-cat="shots">
+        <div class="menu-item-body">
+          <div class="item-name">Absinto</div>
+          <div class="item-desc">Shot de absinto.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>16</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBREMESAS -->
+      <div class="menu-item reveal" data-cat="sobremesas">
+        <div class="menu-item-body">
+          <div class="item-name">Brownie Porteño</div>
+          <div class="item-desc">Brownie, sorvete, calda de chocolate.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>22</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESPECIAIS -->
+      <div class="menu-item reveal" data-cat="especiais">
+        <div class="menu-item-body">
+          <div class="item-name">Cerveja Artesanal</div>
+          <div class="item-desc">Cerveja artesanal.</div>
+          <div class="item-footer">
+            <div class="item-price">R$<span>34</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESERVAS -->
+  <section id="reservas">
+    <div class="reservas-inner">
+      <div class="reservas-info reveal">
+        <div class="section-label">Garanta seu lugar</div>
+        <h2 class="section-title">Reservar <em>Mesa</em></h2>
+        <div class="divider"></div>
+        <div class="reservas-detail">
+          <div class="reservas-detail-icon"></div>
+          <div class="reservas-detail-text">
+            <strong>Localização</strong>
+            Pátio Maceió Fashion, Av. Álvaro Otacílio, 2991 — Jatiúca
+          </div>
+        </div>
+        <div class="reservas-detail">
+          <div class="reservas-detail-icon">�</div>
+          <div class="reservas-detail-text">
+            <strong>Reservas diretas no WhatsApp</strong>
+            <a href="https://wa.me/5582999999999?text=Olá!+Quero+reservar+uma+mesa+no+El+Porteño+Pub." target="_blank">(82) 9 9999-9999 · Enviar mensagem</a>
+          </div>
+        </div>
+        <div class="reservas-detail">
+          <div class="reservas-detail-icon"></div>
+          <div class="reservas-detail-text">
+            <strong>Horário de abertura</strong>
+            Aberto quarta a domingo às 18 horas.
+          </div>
+        </div>
+        <div class="reservas-detail">
+          <div class="reservas-detail-icon"></div>
+          <div class="reservas-detail-text">
+            <strong>Aniversários e eventos</strong>
+            Espaço privativo com menu especial para grupos a partir de 10 pessoas
+          </div>
+        </div>
+        <div class="reservas-detail">
+          <div class="reservas-detail-icon"></div>
+          <div class="reservas-detail-text">
+            <strong>Áreas disponíveis</strong>
+            Salão interno, varanda externa e Lounge VIP
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div style="max-width:1200px;margin:0 auto;" class="reveal">
+      <div class="section-label">Galeria</div>
+      <h2 class="section-title">A <em>atmosfera</em> do Porteño</h2>
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <img src="images/galeria1.jpg" alt="Atmosfera do El Porteño Pub">
+          <div class="galeria-overlay"><span>Ver mais</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="images/galeria2.jpg" alt="Atmosfera do El Porteño Pub">
+          <div class="galeria-overlay"><span>Ver mais</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="images/galeria3.jpg" alt="Atmosfera do El Porteño Pub">
+          <div class="galeria-overlay"><span>Ver mais</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="images/galeria4.jpg" alt="Atmosfera do El Porteño Pub">
+          <div class="galeria-overlay"><span>Ver mais</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="images/galeria5.jpg" alt="Atmosfera do El Porteño Pub">
+          <div class="galeria-overlay"><span>Ver mais</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem">
+        <a href="https://instagram.com/elportenopub" target="_blank" class="btn-outline" style="display:inline-block">
+          Ver mais no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="contato-grid">
+      <div class="reveal">
+        <div class="section-label">Onde estamos</div>
+        <h2 class="section-title">Venha nos <em>visitar</em></h2>
+        <div class="divider"></div>
+
+        <div class="contato-info-row">
+          <div class="contato-icon"></div>
+          <div class="contato-text">
+            <div class="contato-label">Endereço</div>
+            <div class="contato-value">Pátio Maceió Fashion<br>Av. Álvaro Otacílio, 2991 — Jatiúca<br>Maceió – AL</div>
+          </div>
+        </div>
+
+        <div class="contato-info-row">
+          <div class="contato-icon"></div>
+          <div class="contato-text">
+            <div class="contato-label">Horário de funcionamento</div>
+            <div class="contato-value">
+              Aberto quarta a domingo às 18h<br>
+              Seg – Qui: 18h às 00h<br>
+              Sex: 18h às 02h<br>
+              Sáb: 14h às 03h · Dom: 14h às 23h
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-info-row">
+          <div class="contato-icon"></div>
+          <div class="contato-text">
+            <div class="contato-label">Contato</div>
+            <div class="contato-value">
+              <a href="tel:+558299250449">(82) 9 9999-9999</a><br>
+              <a href="https://wa.me/558299250449" target="_blank">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://instagram.com/elportenopub" target="_blank" class="social-link">IG</a>
+          <a href="https://facebook.com/elportenopub" target="_blank" class="social-link">FB</a>
+          <a href="https://wa.me/558299250449" target="_blank" class="social-link">WA</a>
+          <a href="https://tiktok.com/@elportenopub" target="_blank" class="social-link">TT</a>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:0.2s">
+        <div class="map-placeholder">
+          <div class="map-pin"></div>
+          <div class="map-address">
+            Pátio Maceió Fashion<br>
+            Av. Álvaro Otacílio, 2991 — Jatiúca<br>
+            Maceió – AL
+          </div>
+          <a href="https://maps.google.com/?q=El+Porteno+Pub+Maceio" target="_blank" class="uber-btn">
+            Abrir no Maps →
+          </a>
+        </div>
+        <div style="margin-top:1rem;display:flex;gap:0.75rem;">
+          <a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-9.65&dropoff[longitude]=-35.71&dropoff[nickname]=El+Porteno+Pub" target="_blank" class="btn-primary" style="flex:1;text-align:center;padding:0.75rem 1rem;font-size:0.7rem">Chamar Uber</a>
+          <a href="https://wa.me/558299250449?text=Olá!+Quero+fazer+uma+reserva+no+El+Porteño" target="_blank" class="btn-outline" style="flex:1;text-align:center;padding:0.75rem 1rem;font-size:0.7rem">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><img class="logo-img footer-logo-img" src="assets/logo.svg" alt="El Porteño Pub"></div>
+    <div class="footer-sub">Pub — Buenos Aires Soul, Maceió Spirit</div>
+    <div class="divider" style="margin:1rem auto;"></div>
+    <div class="social-links" style="justify-content:center">
+      <a href="#" class="social-link">IG</a>
+      <a href="#" class="social-link">FB</a>
+      <a href="#" class="social-link">WA</a>
+      <a href="#" class="social-link">TT</a>
+    </div>
+    <div class="footer-copy">© 2026 El Porteño Pub · Todos os direitos reservados · Jatiúca, Maceió – AL</div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/558299250449?text=Olá!+Quero+fazer+uma+reserva" target="_blank" class="float-wa" title="WhatsApp">WA</a>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="notify-toast" id="toast">
+    <div class="toast-title">✓ Adicionado</div>
+    <div class="toast-msg" id="toastMsg">Item adicionado com sucesso!</div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="js/script.js"></script>
+</body>
+</html>
